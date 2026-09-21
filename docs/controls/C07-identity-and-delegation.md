@@ -5,4 +5,4 @@ Use least privilege, short-lived credentials where supported, explicit delegatio
 and a tested revocation path.
 
 Do not give a free-running executor a person's personal access token or treat a technical
-identity as proof that the requested action is authorised.
+identity as proof that the requested action is authorized.
