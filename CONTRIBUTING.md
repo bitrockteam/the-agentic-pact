@@ -12,9 +12,11 @@ Contributions should make the Pact easier to apply and harder to misinterpret.
 
 ## Review expectations
 
-The author of a change must not be the only person accepting it. Reviewers should receive
-the proposed text, its rationale, relevant sources, and explicit acceptance criteria.
-They should be able to reject the change when the evidence does not support it.
+For an external contribution, the author must not be the only person accepting it.
+Reviewers should receive the proposed text, its rationale, relevant sources, and explicit
+acceptance criteria. They should be able to reject the change when the evidence does not
+support it. The sole maintainer may merge their own maintenance PR after the required
+checks pass; a second maintainer approval is not required.
 
 Changes that affect a gate, permission, credential, secret boundary, external destination,
 or audit claim require an additional review of the practical failure mode and the evidence
@@ -27,7 +29,9 @@ For a material change, update [`VERSION`](VERSION) and add a matching entry to
 to choose the version increment. Pull requests should be focused and leave a clear
 acceptance criterion for the maintainer.
 
-The `main` branch is maintainer-controlled. External contributors should work from a
-fork and submit a pull request. Required checks and maintainer approval must pass before
-integration. See [`docs/maintenance/branching-strategy.md`](docs/maintenance/branching-strategy.md)
+The `main` branch is maintainer-controlled. Bit Rock contributors can collaborate through
+branches and pull requests; external contributors should work from a fork and submit a
+pull request. Required checks must pass before integration. The repository intentionally
+does not require a second approval, so the sole maintainer can merge independently. See
+[`docs/maintenance/branching-strategy.md`](docs/maintenance/branching-strategy.md)
 for branch names and the pull request flow.

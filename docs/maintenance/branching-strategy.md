@@ -8,7 +8,8 @@ blueprint repository.
 - `main` is the only long-lived branch and must remain releasable.
 - Contributors use short-lived branches named for the change, such as
   `docs/c05-approval-gate`, `fix/ambiguous-wording`, or `feat/release-metadata`.
-- External contributors should create those branches in a fork and open a pull request.
+- Bit Rock contributors can create those branches in the company repository and open a
+  pull request; external contributors should create them in a fork.
 - `hotfix/*` is reserved for urgent corrections and still merges through the normal
   pull request gate.
 

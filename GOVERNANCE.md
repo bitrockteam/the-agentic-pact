@@ -30,7 +30,9 @@ repository. Content is promoted deliberately after sanitisation and review.
 ## Main branch protection
 
 The `main` branch is protected. Changes must arrive through a pull request, pass the
-required repository checks, and receive approval from the maintainer represented by
-`@Voloire` in [`CODEOWNERS`](.github/CODEOWNERS). Only the maintainer merges into `main`;
-contributors can propose changes from forks. Force-pushes and branch deletion are not
-part of the normal workflow.
+required repository checks, and be merged by the maintainer represented by `@Voloire` in
+[`CODEOWNERS`](.github/CODEOWNERS). A second approval is intentionally not required while
+the maintainer is the only maintainer, so the maintainer can merge their own PR. Contributors
+within Bit Rock can propose changes from company branches, and external contributors can
+propose changes from forks. Force-pushes and branch deletion are not part of the normal
+workflow.
