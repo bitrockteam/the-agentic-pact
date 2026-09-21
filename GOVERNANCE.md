@@ -15,7 +15,7 @@ Changes to a control, operating profile, approval gate, or evidence requirement 
 
 Research notes may inform a change, but they do not become policy automatically.
 Vendor guidance and protocol requirements must retain their scope and version. A local
-policy must be labelled as a local policy rather than attributed to an external source.
+policy must be labeled as a local policy rather than attributed to an external source.
 
 ## Publication stages
 
@@ -25,7 +25,7 @@ history, issue tracker, generated artifacts, examples, links, and repository set
 personal or confidential information.
 
 The repository is a curated publication of the Pact, not a mirror of a private research
-repository. Content is promoted deliberately after sanitisation and review.
+repository. Content is promoted deliberately after sanitization and review.
 
 ## Main branch protection
 

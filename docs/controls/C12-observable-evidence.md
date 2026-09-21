@@ -6,4 +6,4 @@ audit trail.
 
 Test log emission, protection, retention, and correlation with real effects. Distinguish
 verified, partial, unsatisfied, unknown, and not-applicable results. A source, a setting,
-or a successful declaration is not evidence of end-to-end behaviour by itself.
+or a successful declaration is not evidence of end-to-end behavior by itself.

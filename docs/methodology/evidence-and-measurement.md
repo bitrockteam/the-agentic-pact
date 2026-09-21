@@ -24,5 +24,5 @@ For each applicable control, record:
 
 Positive tests must be complemented by refusal, failure, expiry, revocation, or uncertain-
 outcome tests where the control depends on them. Offline mocks do not prove permissions or
-remote-service behaviour. A log file is not an audit trail unless its protection and
+remote-service behavior. A log file is not an audit trail unless its protection and
 correlation with the effect have also been tested.
