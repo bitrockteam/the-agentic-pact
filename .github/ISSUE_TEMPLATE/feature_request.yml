@@ -1,0 +1,30 @@
+name: Change proposal
+description: Propose an improvement to the Pact.
+title: "[Proposal]: "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please do not include secrets, private system details, personal data, or client-confidential information.
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What should change?
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale and evidence
+      description: Explain the problem, affected control(s), sources, and trade-offs.
+    validations:
+      required: true
+  - type: checkboxes
+    id: classification
+    attributes:
+      label: Classification
+      options:
+        - label: This is a policy change.
+        - label: This is an editorial or source-backed change.

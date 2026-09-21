@@ -65,3 +65,11 @@ This is an evolving engineering baseline. A statement in this repository is one 
 
 See [`docs/methodology/evidence-and-measurement.md`](docs/methodology/evidence-and-measurement.md)
 for the distinction between documentation, configuration, and observed behaviour.
+
+## Versioning and contributions
+
+The current version is recorded in [`VERSION`](VERSION), with release notes in
+[`CHANGELOG.md`](CHANGELOG.md). See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the review
+process and [`docs/maintenance/releasing.md`](docs/maintenance/releasing.md) for the
+versioning rules. Contributions are welcome through pull requests; the maintainer
+reviews and merges changes to `main`.

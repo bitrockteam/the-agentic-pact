@@ -1,0 +1,30 @@
+name: Bug report
+description: Report an unclear, incorrect, or broken part of the Pact.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please do not include secrets, private system details, personal data, or client-confidential information.
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: File path, section, or link where the problem appears.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is incorrect, ambiguous, or not working?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+      description: What should the text or behaviour say or do instead?
+    validations:
+      required: true

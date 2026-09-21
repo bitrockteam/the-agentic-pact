@@ -26,3 +26,11 @@ personal or confidential information.
 
 The repository is a curated publication of the Pact, not a mirror of a private research
 repository. Content is promoted deliberately after sanitisation and review.
+
+## Main branch protection
+
+The `main` branch is protected. Changes must arrive through a pull request, pass the
+required repository checks, and receive approval from the maintainer represented by
+`@Voloire` in [`CODEOWNERS`](.github/CODEOWNERS). Only the maintainer merges into `main`;
+contributors can propose changes from forks. Force-pushes and branch deletion are not
+part of the normal workflow.

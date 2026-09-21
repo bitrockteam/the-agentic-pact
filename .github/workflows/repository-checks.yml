@@ -1,0 +1,57 @@
+name: Repository checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate version metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          version="$(tr -d '[:space:]' < VERSION)"
+          [[ "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+([.-][0-9A-Za-z.-]+)?$ ]]
+          grep -F "## $version" CHANGELOG.md >/dev/null
+          grep -F "Version" README.md >/dev/null
+      - name: Validate required publication files
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in LICENSE CONTRIBUTING.md GOVERNANCE.md SECURITY.md .github/CODEOWNERS; do
+            test -s "$file"
+          done
+
+  links-and-markdown:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check internal Markdown targets
+        shell: python
+        run: |
+          import pathlib
+          import re
+          import sys
+
+          pattern = re.compile(r"\[[^]]+\]\(([^)]+)\)")
+          failures = []
+          for document in pathlib.Path('.').rglob('*.md'):
+              text = document.read_text(encoding='utf-8')
+              for target in pattern.findall(text):
+                  target = target.split('#', 1)[0]
+                  if not target or target.startswith(('http://', 'https://', 'mailto:')):
+                      continue
+                  resolved = (document.parent / target).resolve()
+                  if not resolved.exists():
+                      failures.append(f'{document}: {target}')
+          if failures:
+              print('Missing Markdown targets:')
+              print('\n'.join(failures))
+              sys.exit(1)
