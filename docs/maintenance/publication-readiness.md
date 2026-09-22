@@ -9,6 +9,7 @@ Use this checklist before changing the repository visibility or publishing a rel
 - [ ] Personal, client-confidential, environmental, and credential material is absent.
 - [ ] Examples do not expose real systems, users, destinations, or secrets.
 - [ ] Sources have scope, version or revision, review date, and applicability recorded.
+- [ ] Active and historical registries preserve source IDs, sections, limits, and review-date meaning.
 
 ## History and repository surface
 
@@ -24,3 +25,4 @@ Use this checklist before changing the repository visibility or publishing a rel
 - [ ] The distinction between policy, source-backed fact, and inference is preserved.
 - [ ] An independent reviewer has checked the effective contents.
 - [ ] Publication does not imply certification, compliance, or guaranteed safety.
+- [ ] Repository visibility, branches, history, generated artifacts, and access settings have been checked.
