@@ -43,8 +43,14 @@ core of this repository.
 | Define the boundary, users, tools, and effects | [`docs/methodology/design-review.md`](docs/methodology/design-review.md) |
 | Choose the right operating gate | [`docs/profiles/operating-profiles.md`](docs/profiles/operating-profiles.md) |
 | Review the requirements one control at a time | [`docs/controls/`](docs/controls/) |
+| Understand delegation, ownership, and merge gates | [`docs/architecture.md`](docs/architecture.md) |
+| Review identity, tokens, and secret boundaries | [`docs/identity-and-credentials.md`](docs/identity-and-credentials.md) |
+| Review protocol-specific limits | [`docs/protocols.md`](docs/protocols.md) |
+| Map effects and agentic risks | [`docs/surface-and-risks.md`](docs/surface-and-risks.md) |
 | Distinguish a proposal from a committed effect | [`docs/controls/C05-proposal-before-commitment.md`](docs/controls/C05-proposal-before-commitment.md) |
-| Decide whether a claim is actually verified | [`docs/methodology/evidence-and-measurement.md`](docs/methodology/evidence-and-measurement.md) |
+| Decide whether a claim is actually verified | [`docs/methodology/measurement.md`](docs/methodology/measurement.md) |
+| Read the active source register and applicability limits | [`docs/reference/sources.md`](docs/reference/sources.md) |
+| Understand historical references and migration decisions | [`docs/reference/historical-sources.md`](docs/reference/historical-sources.md) and [`docs/reference/migration-v2.md`](docs/reference/migration-v2.md) |
 | Contribute or publish a change | [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`docs/maintenance/branching-strategy.md`](docs/maintenance/branching-strategy.md) |
 
 ## How to use this repository
@@ -112,7 +118,10 @@ This is an evolving engineering baseline. A statement in this repository is one 
 - an **inference** that must not be presented as a universal requirement.
 
 See [`docs/methodology/evidence-and-measurement.md`](docs/methodology/evidence-and-measurement.md)
-for the distinction between documentation, configuration, and observed behavior.
+and the more detailed [`docs/methodology/measurement.md`](docs/methodology/measurement.md)
+for the distinction between documentation, configuration, and observed behavior. The source
+register records 39 active sources with explicit passages, control mappings, and applicability
+limits; the historical register is retained separately and is not current evidence.
 
 ## Versioning and contributions
 

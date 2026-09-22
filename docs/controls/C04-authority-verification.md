@@ -1,8 +1,13 @@
-# C04 — Authority verified at entry and action
+# C04 — Authority verification
 
-Authenticate the requester, determine what that requester may ask for, and revalidate the
-authorization when an operation is executed. A known bot, terminal, session, or identity
-does not receive implicit privileges.
+**Policy.** Verify identity and permission at entry, then revalidate resource, arguments,
+recipient, delegation, and limits immediately before the effect. Deny by default. Apply the
+same boundary to CLI, API, UI, scheduled, and agent-to-agent paths.
 
-The check must cover the actual object, operation, scope, destination, and current state.
-Alternative execution paths and retries must not bypass the authorization decision.
+Authentication is not authorization, and a message claiming authority does not prove it.
+OWASP supports deny-by-default and checking permissions on every request. [F05](../reference/sources.md#f05)
+GitHub's agent behavior is product-specific and cannot be generalized to every bot. [F20](../reference/sources.md#f20)
+
+**Applicability:** all effects beyond local analysis, including reads of protected resources.
+**Evidence:** identity, permission decision, resource/argument checks, refusal tests, and
+revocation or expiry behavior.

@@ -1,8 +1,14 @@
-# C02 — One accountable writer for each shared state
+# C02 — One accountable writer
 
-Do not allow concurrent writers to the same artifact or state without explicit ownership,
-disjoint boundaries, and a reconciliation process with one accountable owner.
+**Policy.** One writer owns each artifact or shared resource. Parallel work is allowed only
+when write boundaries are disjoint, the contract is explicit, and reconciliation has a named
+owner. This includes code, documents, memory, tickets, and remote state.
 
-This applies to code, documents, memory, tickets, databases, and remote state. Before
-integration, check invariants, conflicts, and concurrent modifications. Prefer version
-preconditions or equivalent safeguards over blind overwrites.
+Before integration, check invariants, concurrent changes, and conflicts. Prefer expected
+versions or preconditions to overwriting state that changed. The policy is a conservative
+local synthesis of the single-writer and separable-work patterns in [F01](../reference/sources.md#f01)
+and [F02](../reference/sources.md#f02), not a universal claim that multi-writer systems are
+always invalid.
+
+**Applicability:** every shared artifact or mutable resource. **Evidence:** ownership map,
+write boundary, reconciliation result, and conflict test.

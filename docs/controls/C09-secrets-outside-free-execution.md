@@ -1,8 +1,15 @@
-# C09 — Secrets outside unconstrained execution
+# C09 — Secrets outside free execution
 
-Keep secrets in the smallest isolated component that needs them. The boundary must include
-files, processes, caches, temporary data, error messages, and logs.
+**Policy.** Keep credentials in a connector, broker, or bounded executor that authorizes the
+operation. The model and arbitrary code it can run must not read them. Inspect files, mounts,
+inherited environment, processes, caches, logs, diagnostics, and debug channels, not only a
+variable name.
 
-If the boundary cannot be enforced, document the exposure and stop before using the secret.
-Do not rely on prompt instructions, model behavior, or an unverified claim that a secret
-was not exposed.
+Provider documentation about setup-time secret removal is not proof that every copy or
+indirect path is inaccessible. Research on environment filtering shows why neighboring
+processes matter. [F22](../reference/sources.md#f22), [F25](../reference/sources.md#f25)
+MCP stdio credential delivery does not waive local isolation. [F28](../reference/sources.md#f28)
+
+**Applicability:** any workflow that can reach a secret or privileged service. **Evidence:**
+access inventory, process/file/cache inspection, least privilege, expiry/revocation tests, and
+absence of secret values from logs and artifacts.
